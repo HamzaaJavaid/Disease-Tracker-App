@@ -1,4 +1,5 @@
 import 'package:covid_tracker/Main%20Dashboard/dashboard_screen.dart';
+import 'package:covid_tracker/countries%20Data/all_countries_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:typewritertext/typewritertext.dart';
@@ -6,7 +7,7 @@ import 'package:typewritertext/typewritertext.dart';
 void main(){
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: DashboardScreen(),
+    home: MyApp(),
   ));
 }
 
