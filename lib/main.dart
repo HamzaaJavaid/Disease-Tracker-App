@@ -4,7 +4,10 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:typewritertext/typewritertext.dart';
 
 void main(){
-  runApp(MaterialApp(home: DashboardScreen(),));
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: DashboardScreen(),
+  ));
 }
 
 
