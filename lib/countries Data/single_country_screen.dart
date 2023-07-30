@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
 
 class SingleCountryScreen extends StatefulWidget {
-  const SingleCountryScreen({super.key});
+
+
+  String name ;
+  String flag ;
+  String totalCases ;
+  String totalDeaths ;
+  String totalRecovered ;
+  String totalActiveCases ;
+  String totalTestPerformed ;
+  String criticalPatients ;
+
+  SingleCountryScreen(this.name,this.flag,this.totalCases,this.totalDeaths,this.totalRecovered,this.totalActiveCases,this.totalTestPerformed,this.criticalPatients );
 
   @override
   State<SingleCountryScreen> createState() => _SingleCountryScreenState();
@@ -13,9 +24,10 @@ class _SingleCountryScreenState extends State<SingleCountryScreen> {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return  Scaffold(
+
         bottomNavigationBar: Container(
           width: width,
-          height: height/17,
+          height: height/15,
           decoration: BoxDecoration(
               color: Colors.lightBlueAccent.withOpacity(0.5),
               borderRadius: BorderRadius.only(
@@ -34,29 +46,303 @@ class _SingleCountryScreenState extends State<SingleCountryScreen> {
         ),
       body: SingleChildScrollView(
         child: SafeArea(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: Column(
           children: [
-            Column(
+            SizedBox(
+              height: height/30,
+            ),
+            CircleAvatar(
+              radius: 60,
+              backgroundImage: NetworkImage('${widget.flag}'),
+              backgroundColor: Colors.greenAccent,
+            ),
+            SizedBox(
+              height: height/30,
+            ),
+            Text('${widget.name}',style: TextStyle(
+                fontSize: 22
+            ),),
+            SizedBox(
+              height: height/30,
+            ),
+            Row(
+
               children: [
-                SizedBox(
-                  height: height/30,
+                SizedBox(width: 10,),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+
+                      image: DecorationImage(
+                        opacity: 0.6,
+
+                        image: AssetImage('assets/images/deaths.png')
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black12,
+                          spreadRadius: 3,
+                          blurRadius: 3,
+                          offset: Offset(0,3)
+                        )
+                      ],
+                        color: Colors.redAccent.withOpacity(0.8),
+                        borderRadius: BorderRadius.all(Radius.circular(10))
+                    ),
+                    width: width/3,
+                    height: height/7,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        SizedBox(),
+                        Text('${widget.totalDeaths}',style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 22
+                        )),
+                        Text('Total Deaths',style: TextStyle(
+                          color: Colors.white70,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18
+                        ),)
+                      ],
+                    ),
+                  ),
                 ),
-                CircleAvatar(
-                  radius: 60,
-                  backgroundImage: AssetImage('assets/images/splash_screen_icon.png'),
-                  backgroundColor: Colors.greenAccent,
+                SizedBox(width: 10,),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+
+                        image: DecorationImage(
+                            opacity: 0.6,
+                            image: AssetImage('assets/images/cases.png')
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black12,
+                              spreadRadius: 3,
+                              blurRadius: 3,
+                              offset: Offset(0,3)
+                          )
+                        ],
+                        color: Colors.deepPurpleAccent,
+                        borderRadius: BorderRadius.all(Radius.circular(10))
+                    ),
+                    width: width/3,
+                    height: height/7,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        SizedBox(),
+                        Text('${widget.totalCases}',style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 22
+                        )),
+                        Text('Total Cases',style: TextStyle(
+                            color: Colors.white70,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18
+                        ),)
+                      ],
+                    ),
+                  ),
                 ),
-                SizedBox(
-                  height: height/30,
+                SizedBox(width: 10,),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+
+              children: [
+                SizedBox(width: 10,),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+
+                        image: DecorationImage(
+                            opacity: 0.6,
+                            image: AssetImage('assets/images/recovered.png')
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black12,
+                              spreadRadius: 3,
+                              blurRadius: 3,
+                              offset: Offset(0,3)
+                          )
+                        ],
+                        color: Colors.lightGreenAccent.withOpacity(0.9),
+                        borderRadius: BorderRadius.all(Radius.circular(10))
+                    ),
+                    width: width/3,
+                    height: height/7,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        SizedBox(),
+                        Text('${widget.totalRecovered}',style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 22
+                        )),
+                        Text('Total Recoverd',style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18
+                        ),)
+                      ],
+                    ),
+                  ),
                 ),
-                Text('COUNTRY_NAME',style: TextStyle(
-                  fontSize: 22
-                ),),
-                SizedBox(
-                  height: height/30,
+                SizedBox(width: 10,),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+
+                        image: DecorationImage(
+                            opacity: 0.6,
+                            image: AssetImage('assets/images/active.png')
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black12,
+                              spreadRadius: 3,
+                              blurRadius: 3,
+                              offset: Offset(0,3)
+                          )
+                        ],
+                        color: Colors.cyanAccent,
+                        borderRadius: BorderRadius.all(Radius.circular(10))
+                    ),
+                    width: width/3,
+                    height: height/7,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        SizedBox(),
+                        Text('${widget.totalActiveCases}',style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 22
+                        )),
+                        Text('Total Active',style: TextStyle(
+                            color: Colors.red,
+                            fontSize: 18,
+                          fontWeight: FontWeight.bold
+                        ),)
+                      ],
+                    ),
+                  ),
                 ),
-                Container(
+                SizedBox(width: 10,),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+
+              children: [
+                SizedBox(width: 10,),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+
+                        image: DecorationImage(
+                            opacity: 0.4,
+                            image: AssetImage('assets/images/test_performed.png')
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black12,
+                              spreadRadius: 3,
+                              blurRadius: 3,
+                              offset: Offset(0,3)
+                          )
+                        ],
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.all(Radius.circular(10))
+                    ),
+                    width: width/3,
+                    height: height/7,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        SizedBox(),
+                        Text('${widget.totalTestPerformed}',style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 22
+                        )),
+                        Text('Total Test Performed',style: TextStyle(
+                            color: Colors.white70,
+                            fontSize: 18,
+                          fontWeight: FontWeight.bold
+                        ),)
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(width: 10,),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+
+              children: [
+                SizedBox(width: 10,),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+
+                        image: DecorationImage(
+                            opacity: 0.6,
+                            image: AssetImage('assets/images/critical.png')
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black12,
+                              spreadRadius: 3,
+                              blurRadius: 3,
+                              offset: Offset(0,3)
+                          )
+                        ],
+                        color: Colors.orangeAccent,
+                        borderRadius: BorderRadius.all(Radius.circular(10))
+                    ),
+                    width: width/3,
+                    height: height/7,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        SizedBox(),
+                        Text('${widget.criticalPatients}',style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 22
+                        )),
+                        Text('Total Critical Patients',style: TextStyle(
+                            color: Colors.white70,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18
+                        ),)
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(width: 10,),
+              ],
+            ),
+          ],
+        ),
+        ),
+      )
+    );
+  }
+}
+
+/*
+Container(
                   decoration: BoxDecoration(
                       color: Colors.greenAccent.withOpacity(0.7),
                       borderRadius: BorderRadius.all(Radius.circular(20))
@@ -269,12 +555,4 @@ class _SingleCountryScreenState extends State<SingleCountryScreen> {
                     ],
                   ),
                 )
-              ],
-            ),
-          ],
-        ),
-        ),
-      )
-    );
-  }
-}
+ */

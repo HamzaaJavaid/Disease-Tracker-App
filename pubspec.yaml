@@ -39,6 +39,8 @@ dependencies:
   typewritertext: ^1.8.0
   unique_simple_bar_chart: ^0.0.2
   pie_chart: ^5.3.2
+  http: ^1.1.0
+  shimmer: ^3.0.0
 
 dev_dependencies:
   flutter_test:
