@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:covid_tracker/MyCountryData/myCountryScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:unique_simple_bar_chart/data_models.dart';
 import 'package:unique_simple_bar_chart/simple_bar_chart.dart';
@@ -331,7 +332,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                       borderSide: BorderSide(color: Colors.transparent)
                                   ),
                                   onPressed: (){
-
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>myCountryScreen()));
                                   },
                                   child: Text('Search'),
                                 ),
