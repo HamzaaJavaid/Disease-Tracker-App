@@ -30,12 +30,12 @@ class _SingleCountryScreenState extends State<SingleCountryScreen> {
           height: height/15,
           decoration: BoxDecoration(
               color: Colors.lightBlueAccent.withOpacity(0.5),
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                   topRight: Radius.circular((30)),
                   topLeft: Radius.circular((30))
               )
           ),
-          child: Row(
+          child: const Row(
             children: [
               Expanded(child: Icon(Icons.home,color: Colors.white,size: 30,)),
               Expanded(child: Icon(Icons.sunny,color: Colors.white,size: 30,)),
@@ -53,13 +53,13 @@ class _SingleCountryScreenState extends State<SingleCountryScreen> {
             ),
             CircleAvatar(
               radius: 60,
-              backgroundImage: NetworkImage('${widget.flag}'),
+              backgroundImage: NetworkImage(widget.flag),
               backgroundColor: Colors.greenAccent,
             ),
             SizedBox(
               height: height/30,
             ),
-            Text('${widget.name}',style: TextStyle(
+            Text(widget.name,style: const TextStyle(
                 fontSize: 22
             ),),
             SizedBox(
@@ -68,17 +68,17 @@ class _SingleCountryScreenState extends State<SingleCountryScreen> {
             Row(
 
               children: [
-                SizedBox(width: 10,),
+                const SizedBox(width: 10,),
                 Expanded(
                   child: Container(
                     decoration: BoxDecoration(
 
-                      image: DecorationImage(
+                      image: const DecorationImage(
                         opacity: 0.6,
 
                         image: AssetImage('assets/images/deaths.png')
                       ),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           color: Colors.black12,
                           spreadRadius: 3,
@@ -87,19 +87,19 @@ class _SingleCountryScreenState extends State<SingleCountryScreen> {
                         )
                       ],
                         color: Colors.redAccent.withOpacity(0.8),
-                        borderRadius: BorderRadius.all(Radius.circular(10))
+                        borderRadius: const BorderRadius.all(Radius.circular(10))
                     ),
                     width: width/3,
                     height: height/7,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        SizedBox(),
-                        Text('${widget.totalDeaths}',style: TextStyle(
+                        const SizedBox(),
+                        Text(widget.totalDeaths,style: const TextStyle(
                             color: Colors.white,
                             fontSize: 22
                         )),
-                        Text('Total Deaths',style: TextStyle(
+                        const Text('Total Deaths',style: TextStyle(
                           color: Colors.white70,
                           fontWeight: FontWeight.bold,
                           fontSize: 18
@@ -108,10 +108,10 @@ class _SingleCountryScreenState extends State<SingleCountryScreen> {
                     ),
                   ),
                 ),
-                SizedBox(width: 10,),
+                const SizedBox(width: 10,),
                 Expanded(
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
 
                         image: DecorationImage(
                             opacity: 0.6,
@@ -133,12 +133,12 @@ class _SingleCountryScreenState extends State<SingleCountryScreen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        SizedBox(),
-                        Text('${widget.totalCases}',style: TextStyle(
+                        const  SizedBox(),
+                        Text(widget.totalCases,style: const TextStyle(
                             color: Colors.white,
                             fontSize: 22
                         )),
-                        Text('Total Cases',style: TextStyle(
+                        const Text('Total Cases',style: TextStyle(
                             color: Colors.white70,
                             fontWeight: FontWeight.bold,
                             fontSize: 18
@@ -147,25 +147,25 @@ class _SingleCountryScreenState extends State<SingleCountryScreen> {
                     ),
                   ),
                 ),
-                SizedBox(width: 10,),
+                const SizedBox(width: 10,),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
 
               children: [
-                SizedBox(width: 10,),
+                const   SizedBox(width: 10,),
                 Expanded(
                   child: Container(
                     decoration: BoxDecoration(
 
-                        image: DecorationImage(
+                        image:const DecorationImage(
                             opacity: 0.6,
                             image: AssetImage('assets/images/recovered.png')
                         ),
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                               color: Colors.black12,
                               spreadRadius: 3,
@@ -174,19 +174,19 @@ class _SingleCountryScreenState extends State<SingleCountryScreen> {
                           )
                         ],
                         color: Colors.lightGreenAccent.withOpacity(0.9),
-                        borderRadius: BorderRadius.all(Radius.circular(10))
+                        borderRadius: const BorderRadius.all(Radius.circular(10))
                     ),
                     width: width/3,
                     height: height/7,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        SizedBox(),
-                        Text('${widget.totalRecovered}',style: TextStyle(
+                        const SizedBox(),
+                        Text(widget.totalRecovered,style: const TextStyle(
                             color: Colors.white,
                             fontSize: 22
                         )),
-                        Text('Total Recoverd',style: TextStyle(
+                        const Text('Total Recoverd',style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                             fontSize: 18
@@ -195,10 +195,10 @@ class _SingleCountryScreenState extends State<SingleCountryScreen> {
                     ),
                   ),
                 ),
-                SizedBox(width: 10,),
+                const SizedBox(width: 10,),
                 Expanded(
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
 
                         image: DecorationImage(
                             opacity: 0.6,
@@ -220,12 +220,12 @@ class _SingleCountryScreenState extends State<SingleCountryScreen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        SizedBox(),
-                        Text('${widget.totalActiveCases}',style: TextStyle(
+                        const SizedBox(),
+                        Text(widget.totalActiveCases,style: const TextStyle(
                             color: Colors.white,
                             fontSize: 22
                         )),
-                        Text('Total Active',style: TextStyle(
+                        const Text('Total Active',style: TextStyle(
                             color: Colors.red,
                             fontSize: 18,
                           fontWeight: FontWeight.bold
@@ -234,19 +234,19 @@ class _SingleCountryScreenState extends State<SingleCountryScreen> {
                     ),
                   ),
                 ),
-                SizedBox(width: 10,),
+                const SizedBox(width: 10,),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
 
               children: [
-                SizedBox(width: 10,),
+                const SizedBox(width: 10,),
                 Expanded(
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
 
                         image: DecorationImage(
                             opacity: 0.4,
@@ -268,12 +268,12 @@ class _SingleCountryScreenState extends State<SingleCountryScreen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        SizedBox(),
-                        Text('${widget.totalTestPerformed}',style: TextStyle(
+                        const SizedBox(),
+                        Text(widget.totalTestPerformed,style: const TextStyle(
                             color: Colors.white,
                             fontSize: 22
                         )),
-                        Text('Total Test Performed',style: TextStyle(
+                        const Text('Total Test Performed',style: TextStyle(
                             color: Colors.white70,
                             fontSize: 18,
                           fontWeight: FontWeight.bold
@@ -282,19 +282,19 @@ class _SingleCountryScreenState extends State<SingleCountryScreen> {
                     ),
                   ),
                 ),
-                SizedBox(width: 10,),
+                const SizedBox(width: 10,),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
 
               children: [
-                SizedBox(width: 10,),
+                const SizedBox(width: 10,),
                 Expanded(
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
 
                         image: DecorationImage(
                             opacity: 0.6,
@@ -316,12 +316,12 @@ class _SingleCountryScreenState extends State<SingleCountryScreen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        SizedBox(),
-                        Text('${widget.criticalPatients}',style: TextStyle(
+                        const SizedBox(),
+                        Text(widget.criticalPatients,style: const TextStyle(
                             color: Colors.white,
                             fontSize: 22
                         )),
-                        Text('Total Critical Patients',style: TextStyle(
+                        const Text('Total Critical Patients',style: TextStyle(
                             color: Colors.white70,
                             fontWeight: FontWeight.bold,
                             fontSize: 18
@@ -330,7 +330,7 @@ class _SingleCountryScreenState extends State<SingleCountryScreen> {
                     ),
                   ),
                 ),
-                SizedBox(width: 10,),
+                const SizedBox(width: 10,),
               ],
             ),
           ],
