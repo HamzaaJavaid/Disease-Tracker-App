@@ -50,18 +50,19 @@ class _countriesScreenState extends State<countriesScreen> {
 
 
 
+  @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
+        backgroundColor: Colors.deepPurpleAccent,
         child: GestureDetector(
             onTap: (){
               scrollController.jumpTo(scrollController.position.minScrollExtent);
             },
-            child: Icon(Icons.arrow_upward)),
-        backgroundColor: Colors.deepPurpleAccent,
+            child: const Icon(Icons.arrow_upward)),
       ),
       body: SafeArea(
         child: Stack(
@@ -79,7 +80,7 @@ class _countriesScreenState extends State<countriesScreen> {
                       setState(() {
                       });
                     },
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                         hintText: "Search Country",
                         labelText: "Seacrh",
                         border: OutlineInputBorder(
@@ -102,7 +103,7 @@ class _countriesScreenState extends State<countriesScreen> {
                               child: Container(
                                 height: height/10,
                                 width: width/1.1,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                     color: Colors.white,
                                     boxShadow: [
                                       BoxShadow(
@@ -116,7 +117,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                 ),
                                 child: Center(
                                   child: ListTile(
-                                    shape: OutlineInputBorder(
+                                    shape: const OutlineInputBorder(
                                         borderRadius: BorderRadius.all(Radius.circular(10)),
                                         borderSide: BorderSide(
                                             color: Colors.transparent
@@ -135,7 +136,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                     leading: Shimmer.fromColors(
                                       highlightColor: Colors.white10,
                                       baseColor: Colors.cyanAccent.withOpacity(0.3),
-                                      child: CircleAvatar(
+                                      child: const CircleAvatar(
                                         radius: 30,
 
                                       ),
@@ -143,7 +144,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                     trailing: Shimmer.fromColors(
                                       highlightColor: Colors.white10,
                                       baseColor: Colors.greenAccent.withOpacity(0.7),
-                                      child: CircleAvatar(
+                                      child: const CircleAvatar(
                                         backgroundColor: Colors.lightGreenAccent,
                                         child: Icon(
                                           Icons.arrow_forward_outlined,
@@ -160,7 +161,7 @@ class _countriesScreenState extends State<countriesScreen> {
                               child: Container(
                                 height: height/10,
                                 width: width/1.1,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                     color: Colors.white,
                                     boxShadow: [
                                       BoxShadow(
@@ -174,7 +175,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                 ),
                                 child: Center(
                                   child: ListTile(
-                                    shape: OutlineInputBorder(
+                                    shape: const OutlineInputBorder(
                                         borderRadius: BorderRadius.all(Radius.circular(10)),
                                         borderSide: BorderSide(
                                             color: Colors.transparent
@@ -193,7 +194,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                     leading: Shimmer.fromColors(
                                       highlightColor: Colors.white10,
                                       baseColor: Colors.cyanAccent.withOpacity(0.3),
-                                      child: CircleAvatar(
+                                      child: const CircleAvatar(
                                         radius: 30,
 
                                       ),
@@ -201,7 +202,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                     trailing: Shimmer.fromColors(
                                       highlightColor: Colors.white10,
                                       baseColor: Colors.greenAccent.withOpacity(0.7),
-                                      child: CircleAvatar(
+                                      child: const CircleAvatar(
                                         backgroundColor: Colors.lightGreenAccent,
                                         child: Icon(
                                           Icons.arrow_forward_outlined,
@@ -218,7 +219,7 @@ class _countriesScreenState extends State<countriesScreen> {
                               child: Container(
                                 height: height/10,
                                 width: width/1.1,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                     color: Colors.white,
                                     boxShadow: [
                                       BoxShadow(
@@ -232,7 +233,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                 ),
                                 child: Center(
                                   child: ListTile(
-                                    shape: OutlineInputBorder(
+                                    shape: const OutlineInputBorder(
                                         borderRadius: BorderRadius.all(Radius.circular(10)),
                                         borderSide: BorderSide(
                                             color: Colors.transparent
@@ -251,7 +252,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                     leading: Shimmer.fromColors(
                                       highlightColor: Colors.white10,
                                       baseColor: Colors.cyanAccent.withOpacity(0.3),
-                                      child: CircleAvatar(
+                                      child: const CircleAvatar(
                                         radius: 30,
 
                                       ),
@@ -259,7 +260,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                     trailing: Shimmer.fromColors(
                                       highlightColor: Colors.white10,
                                       baseColor: Colors.greenAccent.withOpacity(0.7),
-                                      child: CircleAvatar(
+                                      child: const CircleAvatar(
                                         backgroundColor: Colors.lightGreenAccent,
                                         child: Icon(
                                           Icons.arrow_forward_outlined,
@@ -276,7 +277,7 @@ class _countriesScreenState extends State<countriesScreen> {
                               child: Container(
                                 height: height/10,
                                 width: width/1.1,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                     color: Colors.white,
                                     boxShadow: [
                                       BoxShadow(
@@ -290,7 +291,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                 ),
                                 child: Center(
                                   child: ListTile(
-                                    shape: OutlineInputBorder(
+                                    shape: const OutlineInputBorder(
                                         borderRadius: BorderRadius.all(Radius.circular(10)),
                                         borderSide: BorderSide(
                                             color: Colors.transparent
@@ -309,7 +310,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                     leading: Shimmer.fromColors(
                                       highlightColor: Colors.white10,
                                       baseColor: Colors.cyanAccent.withOpacity(0.3),
-                                      child: CircleAvatar(
+                                      child: const CircleAvatar(
                                         radius: 30,
 
                                       ),
@@ -317,7 +318,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                     trailing: Shimmer.fromColors(
                                       highlightColor: Colors.white10,
                                       baseColor: Colors.greenAccent.withOpacity(0.7),
-                                      child: CircleAvatar(
+                                      child: const CircleAvatar(
                                         backgroundColor: Colors.lightGreenAccent,
                                         child: Icon(
                                           Icons.arrow_forward_outlined,
@@ -334,7 +335,7 @@ class _countriesScreenState extends State<countriesScreen> {
                               child: Container(
                                 height: height/10,
                                 width: width/1.1,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                     color: Colors.white,
                                     boxShadow: [
                                       BoxShadow(
@@ -348,7 +349,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                 ),
                                 child: Center(
                                   child: ListTile(
-                                    shape: OutlineInputBorder(
+                                    shape: const OutlineInputBorder(
                                         borderRadius: BorderRadius.all(Radius.circular(10)),
                                         borderSide: BorderSide(
                                             color: Colors.transparent
@@ -367,7 +368,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                     leading: Shimmer.fromColors(
                                       highlightColor: Colors.white10,
                                       baseColor: Colors.cyanAccent.withOpacity(0.3),
-                                      child: CircleAvatar(
+                                      child: const CircleAvatar(
                                         radius: 30,
 
                                       ),
@@ -375,7 +376,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                     trailing: Shimmer.fromColors(
                                       highlightColor: Colors.white10,
                                       baseColor: Colors.greenAccent.withOpacity(0.7),
-                                      child: CircleAvatar(
+                                      child: const CircleAvatar(
                                         backgroundColor: Colors.lightGreenAccent,
                                         child: Icon(
                                           Icons.arrow_forward_outlined,
@@ -392,7 +393,7 @@ class _countriesScreenState extends State<countriesScreen> {
                               child: Container(
                                 height: height/10,
                                 width: width/1.1,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                     color: Colors.white,
                                     boxShadow: [
                                       BoxShadow(
@@ -406,7 +407,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                 ),
                                 child: Center(
                                   child: ListTile(
-                                    shape: OutlineInputBorder(
+                                    shape: const OutlineInputBorder(
                                         borderRadius: BorderRadius.all(Radius.circular(10)),
                                         borderSide: BorderSide(
                                             color: Colors.transparent
@@ -425,7 +426,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                     leading: Shimmer.fromColors(
                                       highlightColor: Colors.white10,
                                       baseColor: Colors.cyanAccent.withOpacity(0.3),
-                                      child: CircleAvatar(
+                                      child: const CircleAvatar(
                                         radius: 30,
 
                                       ),
@@ -433,7 +434,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                     trailing: Shimmer.fromColors(
                                       highlightColor: Colors.white10,
                                       baseColor: Colors.greenAccent.withOpacity(0.7),
-                                      child: CircleAvatar(
+                                      child: const CircleAvatar(
                                         backgroundColor: Colors.lightGreenAccent,
                                         child: Icon(
                                           Icons.arrow_forward_outlined,
@@ -482,7 +483,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                     child: Container(
                                       height: height/10,
                                       width: width/1.1,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                           color: Colors.white,
                                           boxShadow: [
                                             BoxShadow(
@@ -496,14 +497,14 @@ class _countriesScreenState extends State<countriesScreen> {
                                       ),
                                       child: Center(
                                         child: ListTile(
-                                          shape: OutlineInputBorder(
+                                          shape: const OutlineInputBorder(
                                               borderRadius: BorderRadius.all(Radius.circular(10)),
                                               borderSide: BorderSide(
                                                   color: Colors.transparent
                                               )
                                           ),
 
-                                          title: Text(name,style: TextStyle(
+                                          title: Text(name,style: const TextStyle(
                                               color: Colors.orangeAccent,
                                               fontSize: 20
                                           ),),
@@ -511,7 +512,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                             radius: 30,
                                             backgroundImage: NetworkImage(flag),
                                           ),
-                                          trailing: CircleAvatar(
+                                          trailing: const CircleAvatar(
                                             backgroundColor: Colors.lightGreenAccent,
                                             child: Icon(
                                               Icons.arrow_forward_outlined,
@@ -539,7 +540,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                     child: Container(
                                       height: height/10,
                                       width: width/1.1,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                           color: Colors.white,
                                           boxShadow: [
                                             BoxShadow(
@@ -553,14 +554,14 @@ class _countriesScreenState extends State<countriesScreen> {
                                       ),
                                       child: Center(
                                         child: ListTile(
-                                          shape: OutlineInputBorder(
+                                          shape: const OutlineInputBorder(
                                               borderRadius: BorderRadius.all(Radius.circular(10)),
                                               borderSide: BorderSide(
                                                   color: Colors.transparent
                                               )
                                           ),
 
-                                          title: Text(name,style: TextStyle(
+                                          title: Text(name,style: const TextStyle(
                                               color: Colors.orangeAccent,
                                               fontSize: 20
                                           ),),
@@ -568,7 +569,7 @@ class _countriesScreenState extends State<countriesScreen> {
                                             radius: 30,
                                             backgroundImage: NetworkImage(flag),
                                           ),
-                                          trailing: CircleAvatar(
+                                          trailing: const CircleAvatar(
                                             backgroundColor: Colors.lightGreenAccent,
                                             child: Icon(
                                               Icons.arrow_forward_outlined,

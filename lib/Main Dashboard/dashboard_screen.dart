@@ -59,12 +59,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
         height: height/17,
         decoration: BoxDecoration(
             color: Colors.lightBlueAccent.withOpacity(0.5),
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             topRight: Radius.circular((30)),
             topLeft: Radius.circular((30))
           )
         ),
-        child: Row(
+        child: const Row(
           children: [
             Expanded(child: Icon(Icons.home,color: Colors.white,size: 30,)),
             Expanded(child: Icon(Icons.sunny,color: Colors.white,size: 30,)),
@@ -81,19 +81,19 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 height: height/20,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Container(
 
                   height: height/3,
                   width: width/1.1,
                   decoration: BoxDecoration(
                       color: Colors.deepPurpleAccent.withOpacity(0.7),
-                    borderRadius: BorderRadius.all(Radius.circular(20))
+                    borderRadius: const BorderRadius.all(Radius.circular(20))
                   ),
                   child: Stack(
                     children: [
                       Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           image: DecorationImage(
                             opacity: 0.2,
                             scale: 1.3,
@@ -106,19 +106,19 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         builder: (context,snapshot){
                           if(!snapshot.hasData){
                             return Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 20),
+                              padding: const EdgeInsets.symmetric(horizontal: 20),
                               child: Container(
 
                                   height: height/3,
                                   width: width/1.1,
                                   decoration: BoxDecoration(
                                       color: Colors.deepPurpleAccent.withOpacity(0.7),
-                                      borderRadius: BorderRadius.all(Radius.circular(20))
+                                      borderRadius: const BorderRadius.all(Radius.circular(20))
                                   ),
                                   child: Stack(
                                     children: [
                                       Container(
-                                        decoration: BoxDecoration(
+                                        decoration: const BoxDecoration(
                                             image: DecorationImage(
                                                 opacity: 0.2,
                                                 scale: 1.3,
@@ -127,20 +127,20 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                         ),
                                       ),
                                       PieChart(
-                                        dataMap: {
+                                        dataMap: const {
                                           "Today Cases" : 0,
                                           "Today Deaths":0,
                                           "Today Recovery": 0,
                                         },
-                                        animationDuration: Duration(milliseconds: 800),
+                                        animationDuration: const Duration(milliseconds: 800),
                                         chartLegendSpacing: 32,
                                         chartRadius: MediaQuery.of(context).size.width / 3.2,
-                                        colorList: [Colors.orangeAccent,Colors.redAccent,Colors.greenAccent],
+                                        colorList: const [Colors.orangeAccent,Colors.redAccent,Colors.greenAccent],
                                         initialAngleInDegree: 0,
                                         chartType: ChartType.ring,
                                         ringStrokeWidth: 32,
                                         centerText: "DATA",
-                                        legendOptions: LegendOptions(
+                                        legendOptions: const LegendOptions(
                                           showLegendsInRow: false,
                                           legendPosition: LegendPosition.left,
                                           showLegends: true,
@@ -151,7 +151,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                               fontSize: 20
                                           ),
                                         ),
-                                        chartValuesOptions: ChartValuesOptions(
+                                        chartValuesOptions: const ChartValuesOptions(
                                           showChartValueBackground: true,
                                           showChartValues: true,
                                           showChartValuesInPercentage: true,
@@ -179,15 +179,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               "Today Deaths":double.parse(totalDeaths)*2,
                               "Today Recovery": double.parse(totalRecovery),
                             },
-                            animationDuration: Duration(milliseconds: 800),
+                            animationDuration: const Duration(milliseconds: 800),
                             chartLegendSpacing: 32,
                             chartRadius: MediaQuery.of(context).size.width / 3.2,
-                            colorList: [Colors.orangeAccent,Colors.redAccent,Colors.greenAccent],
+                            colorList: const [Colors.orangeAccent,Colors.redAccent,Colors.greenAccent],
                             initialAngleInDegree: 0,
                             chartType: ChartType.ring,
                             ringStrokeWidth: 32,
                             centerText: "DATA",
-                            legendOptions: LegendOptions(
+                            legendOptions: const LegendOptions(
                               showLegendsInRow: false,
                               legendPosition: LegendPosition.left,
                               showLegends: true,
@@ -198,7 +198,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                   fontSize: 20
                               ),
                             ),
-                            chartValuesOptions: ChartValuesOptions(
+                            chartValuesOptions: const ChartValuesOptions(
                               showChartValueBackground: true,
                               showChartValues: true,
                               showChartValuesInPercentage: true,
@@ -227,14 +227,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   scrollDirection: Axis.horizontal,
                   
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     Container(
 
                       width: width/2,
                       height: height/10,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           color: Colors.indigoAccent,
                           borderRadius: BorderRadius.all(Radius.circular(20))
                       ),
@@ -243,7 +243,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       Container(
                         width: width/2,
                         height: height/5,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           image: DecorationImage(
                             scale: 1,
                             opacity: 0.6,
@@ -254,7 +254,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             borderRadius: BorderRadius.all(Radius.circular(20))
                         ),
                       ),
-                          Center(child: Text('Countries Data',style: TextStyle(
+                          const Center(child: Text('Countries Data',style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,
                             fontWeight: FontWeight.bold
@@ -269,14 +269,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                 MaterialButton(
                                   minWidth: width/3,
                                     color: Colors.lightGreenAccent,
-                                    shape: OutlineInputBorder(
+                                    shape: const OutlineInputBorder(
                                       borderRadius: BorderRadius.all(Radius.circular(10)),
                                       borderSide: BorderSide(color: Colors.transparent)
                                     ),
                                     onPressed: (){
-                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>countriesScreen()));
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const countriesScreen()));
                                     },
-                                child: Text('Search'),
+                                child: const Text('Search'),
                                 ),
                               ],
                             ),
@@ -285,14 +285,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       ),
                     ),
 
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     Container(
 
                       width: width/2,
                       height: height/10,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           color: Colors.orangeAccent,
                           borderRadius: BorderRadius.all(Radius.circular(20))
                       ),
@@ -301,7 +301,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           Container(
                             width: width/2,
                             height: height/5,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                                 image: DecorationImage(
                                   scale: 1,
                                   opacity: 0.6,
@@ -312,7 +312,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                 borderRadius: BorderRadius.all(Radius.circular(20))
                             ),
                           ),
-                          Center(child: Text('My Country',style: TextStyle(
+                          const Center(child: Text('My Country',style: TextStyle(
                               color: Colors.white,
                               fontSize: 28,
                               fontWeight: FontWeight.bold
@@ -327,14 +327,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                 MaterialButton(
                                   minWidth: width/3,
                                   color: Colors.lightGreenAccent,
-                                  shape: OutlineInputBorder(
+                                  shape: const OutlineInputBorder(
                                       borderRadius: BorderRadius.all(Radius.circular(10)),
                                       borderSide: BorderSide(color: Colors.transparent)
                                   ),
                                   onPressed: (){
-                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>myCountryScreen()));
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const myCountryScreen()));
                                   },
-                                  child: Text('Search'),
+                                  child: const Text('Search'),
                                 ),
                               ],
                             ),
@@ -343,14 +343,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       ),
                     ),
 
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     Container(
 
                       width: width/2,
                       height: height/10,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           color: Colors.greenAccent,
                           borderRadius: BorderRadius.all(Radius.circular(20))
                       ),
@@ -359,7 +359,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           Container(
                             width: width/2,
                             height: height/5,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                                 image: DecorationImage(
                                   scale: 1,
                                   opacity: 0.4,
@@ -370,7 +370,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                 borderRadius: BorderRadius.all(Radius.circular(20))
                             ),
                           ),
-                          Center(child: Text('Rate Us Now',style: TextStyle(
+                          const Center(child: Text('Rate Us Now',style: TextStyle(
                               color: Colors.white,
                               fontSize: 25,
                               fontWeight: FontWeight.bold
@@ -385,12 +385,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                 MaterialButton(
                                   minWidth: width/3,
                                   color: Colors.lightGreenAccent,
-                                  shape: OutlineInputBorder(
+                                  shape: const OutlineInputBorder(
                                       borderRadius: BorderRadius.all(Radius.circular(10)),
                                       borderSide: BorderSide(color: Colors.transparent)
                                   ),
                                   onPressed: (){},
-                                  child: Text('Search'),
+                                  child: const Text('Search'),
                                 ),
                               ],
                             ),
@@ -407,20 +407,20 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 height: height/60,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Container(
 
                   height: height/3.6,
                   width: width/1,
                   decoration: BoxDecoration(
                       color: Colors.lightGreenAccent.withOpacity(0.6),
-                      borderRadius: BorderRadius.all(Radius.circular(20))
+                      borderRadius: const BorderRadius.all(Radius.circular(20))
                   ),
                   child : Padding(
-                    padding: EdgeInsets.only(left: 2),
+                    padding: const EdgeInsets.only(left: 2),
                     child: Stack(
                       children: [
-                        Opacity(
+                        const Opacity(
                             opacity: 0.4,
                             child: Image(image: AssetImage('assets/images/statistic_icon.png'),)),
                        FutureBuilder(
